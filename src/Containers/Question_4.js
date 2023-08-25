@@ -4,15 +4,19 @@ import React, { useState } from 'react';
 const PER_CARD_PRICE = 20;
 
 const Question4 = ()=>{
-    const [quatity, setQuatity] = useState(1)
-    const [totalPrice, setTotalPrice] = useState(0)
+    const [quatity, setQuatity] = useState(0)
+    const totalPrice = quatity * PER_CARD_PRICE;
+
     
+    const handlerUpdatePrice = ()=>{
+        setQuatity((prevQuatity)=> prevQuatity + 1)
+    }
  
     return (
         <>
             <h2 className='text-2xl text-center bg-slate-200 mb-3 py-3'>Question No 4.</h2>
             <div className='text-2xl text-center mb-3 py-3'>
-                <button 
+                <button onClick={handlerUpdatePrice}
                     className='bg-blue-700 rounded-md py-1 px-2 text-white'>
                     Add to Card
                 </button>

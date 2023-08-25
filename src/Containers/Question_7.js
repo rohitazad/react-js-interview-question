@@ -4,8 +4,17 @@ import React, { useEffect, useState } from 'react';
 
 
 const Question7 = ()=>{
-    const [count, setCount] = useState(0);
-   
+    const [count, setCount] = useState('');
+    
+    useEffect(()=>{
+        const i = setInterval(() => {
+            const date  = new Date().toLocaleString()
+            setCount(date)
+        }, 1000);
+
+        return ()=> clearInterval(i)
+    }, [count])
+
     return (
         <>
             <h2 className='text-2xl text-center bg-slate-200 mb-3 py-3'>Question No 7.  clearInterval </h2>
@@ -15,6 +24,15 @@ const Question7 = ()=>{
         </>
     )
 }
+
+
+
+
+
+
+
+
+
 
 
 

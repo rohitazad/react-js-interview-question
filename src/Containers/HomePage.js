@@ -4,11 +4,11 @@ const HomePage = ()=>{
     const [count, setCount] = useState(0);
 
     const handlerCountChange = ()=>{
-        setCount(count+1);
-        setCount(count+1);
-        setCount(count+1);
-        setCount(count+1);
-        setCount(count+1);
+        setCount((prevCount)=> prevCount + 1);
+        setCount((prevCount)=> prevCount + 1);
+        setCount((prevCount)=> prevCount + 1);
+        setCount((prevCount)=> prevCount + 1);
+        setCount((prevCount)=> prevCount + 1);
     }
 
     return (

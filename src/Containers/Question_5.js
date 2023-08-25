@@ -5,10 +5,13 @@ import React, { useEffect, useState } from 'react';
 
 const Question5 = ()=>{
     console.log('My components Rendring...')
-    const [data, setData] = useState(0)
+    const [data, setData] = useState({name:'Rohit',age:35})
     
     const handleClick = ()=>{
-        setData(0)
+        setData({
+            ...data,
+            age:35
+        })
     }
  
     return (
